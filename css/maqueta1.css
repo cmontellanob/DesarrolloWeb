@@ -1,0 +1,42 @@
+#contenedor {
+	width: 900px;
+	margin: 0 auto;
+
+}
+#arriba {
+	width: 800px;
+	height: 100px;
+	background: #FF0000;
+}
+#cuerpo {
+	width:800px;
+	height: 400px;
+	background: #00FF00;
+}
+ul.menu {
+clear: both;
+float: left;
+width: 100%;
+list-style: none;
+margin: 0;
+padding: 0;
+border-left:1px solid #7C7C7C;
+}
+ul.menu li {
+display: inline;
+height: 20px;
+float: left;
+}
+ul.menu li a:link, ul.menu li a:visited {
+padding: .3em;
+display: block;
+text-decoration: none;
+color: #333;
+background: #F4F4F4;
+border-top:1px solid #7C7C7C;
+border-right:1px solid #7C7C7C;
+border-bottom:1px solid #9C9C9C;
+}
+ul.menu li a:hover{
+	background-color: #FC0;
+}
