@@ -1,8 +1,10 @@
 <?php include("conexion.php"); 
 $Producto=$_POST["txtProducto"];
 $Descripcion=$_POST["txtDescripcion"];
+$Idcategoria=$_POST["selIdcategoria"];
+
 $Precio=$_POST["txtPrecio"];
-$sql="INSERT INTO productos (Producto,Descripcion,Precio) values ('$Producto','$Descripcion',$Precio)";
+$sql="INSERT INTO productos (Producto,Descripcion,Idcategoria,Precio) values ('$Producto','$Descripcion',$Idcategoria,$Precio)";
 //echo $sql;
 $con->query($sql);
 if ($con->connect_error)

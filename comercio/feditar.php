@@ -1,9 +1,12 @@
-<?php 
+<?php  session_start();
+if (isset($_SESSION['correo']))
+{
+
 include("conexion.php");
 $Id=$_GET["txtId"];
 $sql="SELECT Id,Producto,Descripcion,Foto,Precio from productos WHERE id=".$Id;
-$resultado=$con->query($sql);
-$fila=$resultado->fetch_assoc();
+$resu$resultado=$con->query($sql);
+$fila=ltado->fetch_assoc();
 
  ?>
 <!DOCTYPE html>
