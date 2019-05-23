@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Suma</title>
+</head>
+<script>
+	function suma()
+	{
+		console.log("entro");
+//		alert("entro");
+		//*var entradas=document.getElementsByTagName("INPUT"); //arreglo
+		var entradasA=document.getElementsByName("txtA"); //arreglo
+		var entradasB=document.getElementsByName("txtB"); //arreglo
+
+//		alert(entradas.length);
+		//a=entradas[0].value;
+		a=entradasA[0].value;
+		//b=entradas[1].value;
+		b=entradasB[0].value;
+		c=parseInt(a)+parseInt(b);
+		var capas=document.getElementsByTagName("div"); //arreglo
+		capas[0].innerHTML=c;
+
+ 	}
+</script>	
+<body>
+	
+		<label for="txtA">A:</label>
+		<input type="text" name="txtA"> <br>
+		<label for="txtB">b:</label>
+		<input type="text" name="txtB"> <br>
+		<label for="rboperacion">Operacion</label>
+		+<input type="radio" name="rboperacion" value ="+"> 
+		-<input type="radio" name="rboperacion" value ="-"> 
+		
+		<br>
+		
+		<input type="button" value="Calcular"   onclick="suma()">
+		
+	<div>
+
+		
+	</div>
+</body>
+</html>

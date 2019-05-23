@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Suma</title>
+</head>
+<script>
+	function operaciones()
+	{
+		//console.log("entro");
+
+		var a=document.getElementById("txtA").value; //objeto
+		var b=document.getElementById("txtB").value; //objeto
+		var operacionmas=document.getElementById("roperacionmas"); //objeto
+
+
+		if (operacionmas.checked)
+			c=parseInt(a)+parseInt(b);
+		else
+			c=parseInt(a)-parseInt(b);
+		var resutado=document.getElementById("resultado"); //arreglo
+		resultado.innerHTML=c;
+
+ 	}
+</script>	
+<body>
+	
+		<label for="txtA">A:</label>
+		<input type="text" name="txtA" id="txtA"> <br>
+		<label for="txtB">b:</label>
+		<input type="text" name="txtB" id="txtB"> <br>
+		<label for="rboperacion">Operacion</label>
+		+<input type="radio" name="rboperacion" checked="checked" value ="+" id="roperacionmas"> 
+		-<input type="radio" name="rboperacion" value ="-"  id="roperacionmenos"> 
+		
+		<br>
+		
+		<input type="button" value="Calcular"   onclick="operaciones()">
+		
+	<div id="resultado">
+
+		
+	</div>
+</body>
+</html>
