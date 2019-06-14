@@ -1,0 +1,27 @@
+<hmtl>
+ <head>
+	<script>
+ function calcular()
+	{
+	a=parseInt(document.getElementById("txtA").value);
+	b=parseInt(document.getElementById("txtB").value);
+	c=parseInt(document.getElementById("txtC").value);
+	x1= (-b+Math.sqrt(b*b-4*a*c))/2*a;
+	console.log(x1);
+	x2=(-b-Math.sqrt(b*b-4*a*c))/2*a;
+	document.getElementById("resultado").innerHTML="x1="+x1+"<br>x2="+x2+"<br>"
+			}
+	</script>
+	</head>	
+<body>
+<label for="txtA">Introduzca el valor de a</label>
+<input type="text" id="txtA" onchange="calcular()"><br/> 	
+<label for="txtB">Introduzca el valor de b</label>
+<input type="text" id="txtB" onchange="calcular()"><br/> 	
+<label for="txtC">Introduzca el valor de c</label>
+<input type="text" id="txtC" onchange="calcular()"><br/> 	
+
+<div id="resultado">
+</div>
+</body>
+</html>

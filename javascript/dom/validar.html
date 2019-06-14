@@ -1,0 +1,73 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<script type="text/javascript" language="javascript">
+	function validarForm() 
+	{
+		var formulario = document.getElementById("formulario");
+  		if(formulario.txtnombres.value.length==0) { //comprueba que no esté vacío
+			formulario.txtnombres.focus();   
+    		m=document.getElementById('mensaje');
+			m.innerHTML='No has escrito tu nombre'; 
+			return false; //devolvemos el foco
+  		 }
+		 if(formulario.txtdireccion.value.length==0) { //comprueba que no esté vacío
+    		formulario.txtdireccion.focus();   
+    		alert('No has escrito tu direccion'); 
+    		return false; //devolvemos el foco
+  		 }
+		 if(formulario.txtapellidos.value.length==0) { //comprueba que no esté vacío
+    		formulario.txtapellidos.focus();   
+    		alert('No has escrito tu apellido'); 
+    		return false; //devolvemos el foco
+  		 }
+		 if(formulario.txttelefono.value.length==0) { //comprueba que no esté vacío
+    		formulario.txttelefono.focus();   
+    		alert('No has escrito tu telefono'); 
+    		return false; //devolvemos el foco
+  		 }
+		 if(formulario.txtemail.value.length==0) { //comprueba que no esté vacío
+    		formulario.txtemail.focus();   
+    		alert('No has escrito tu Email'); 
+    		return false; //devolvemos el foco
+  		 }
+		var valor=formulario.txtemail.value;
+		var plant = /[^\w^@^\.^-]+/gi
+		if (plant.test(valor)) {
+			alert(valor + " contiene caracteres extraños.");
+			formulario.txtemail.focus();
+			return false;		
+		}
+		else{
+			plant =/(^\w+)(@{1})([\w\.-]+$)/i
+			if (!plant.test(valor)){
+			alert('Email no valido');
+			formulario.Email.focus();
+			return false;		 
+			}
+		}
+     formulario.submit();
+ 	 return true;
+ }
+</script>
+</head>
+
+<body>
+<form id="formulario"  action="registrar.php" method="post">
+	Nombres:
+	<input  type="text" name="txtnombres"/></br>
+	Apellidos:
+	<input type="text" name="txtapellidos"/></br>
+	Direccion:
+	<input  type="text" name="txtdireccion"/></br>
+	Telefono:
+	<input  type="text" name="txttelefono"/></br>
+	Email
+	<input  type="text" name="txtemail"/></br>
+	<input type="button" name="verificar" value="verificar" onclick="validarForm();"/>
+</form>
+<div id="mensaje">
+</div>
+</body>
+</html>

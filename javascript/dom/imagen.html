@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" language="javascript">
+function changeSrc(){
+alert(document.getElementById("myImage").src);
+document.getElementById("myImage").src="images/logo2.jpg";
+alert(document.getElementById("myImage").src);
+}
+</script>
+</head>
+<body>
+<img id="myImage" src="images/logo.jpg">
+<br><br>
+<input type="button" onclick="changeSrc()" value="cambiar imagen">
+<form name="formulario">
+</body>
+</html>

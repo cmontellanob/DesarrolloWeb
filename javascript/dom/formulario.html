@@ -1,0 +1,18 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+</head>
+
+<body>
+Introduzca su nombre: 
+<FORM ACTION="recibir.php" METHOD="GET"> 
+<INPUT TYPE="password" name="nombre" value="carlos"><br> 
+<INPUT TYPE="submit" VALUE="Enviar"> 
+</FORM> 
+<script type="text/javascript">
+var nom=document.getElementsByName("nombre");
+document.write(nom[0].value);
+</script>
+</body>
+</html>

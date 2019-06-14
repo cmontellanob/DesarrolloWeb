@@ -1,0 +1,30 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+</head>
+
+<body>
+<input type="radio" value="si" name="pregunta" id="pregunta_si"/> SI
+<input type="radio" value="no" name="pregunta" id="pregunta_no"/> NO
+<input type="radio" value="nsnc" name="pregunta" id="pregunta_nsnc" checked="checked"/> NS/NC
+<input type="button" onclick="botones();" value="Mostrar" />
+<p>
+Mensaje </p>
+<div id="mensaje">
+
+</div>	
+<script type="text/javascript">
+function botones(){
+var elementos = document.getElementsByName("pregunta");
+var mensaje="";
+for(var i=0; i<elementos.length; i++) {
+    mensaje=mensaje+" Elemento: " + elementos[i].value + " Seleccionado: " +
+elementos[i].checked+"<br/>";
+} 
+document.getElementById("mensaje").innerHTML=mensaje;
+}
+</script>
+
+</body>
+</html>

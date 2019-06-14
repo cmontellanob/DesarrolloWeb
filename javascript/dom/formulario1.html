@@ -1,0 +1,37 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<script type="text/javascript">
+function Mostrar()
+{
+var f=document.forms;
+var l=f.length;
+alert('Existen '+l+' formularios en la pagina');
+alert(f[0].txtAutor.value);
+}
+</script>
+
+</head>
+
+<body>
+ingrese sus datos
+<form id="form1" name="form1" method="post" >
+ <label for ="txtTitulo">Titulo</label>
+    <input name="txtTitulo" type="text" id="txtTitulo"/>
+    <br />
+ <label for ="txtAutor">Autor</label>
+    
+ <input type="text" name="txtAutor"  value="datos de prueba"/><br />
+ <label for ="txtISBN">ISBN</label>
+ <input type="text" name="txtISBN" /><br />
+ <label for ="txtEditorial">Editorial</label>
+  <input type="text" name="txtEditorial" /><br />
+<label for ="txtEdicion">Edicion</label>
+    <input type="text" name="txtEdicion" />
+      <br />
+  <button onclick="Mostrar()">Mostrar</button>
+</form>
+</body>
+
+</html>
