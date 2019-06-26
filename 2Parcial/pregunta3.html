@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Pregunta 4</title>
+<script>
+	function colocar()
+	{
+    var htm='<label for="txtn" >introduzca un valor</label>';
+    htm+='<input type="text" id="txtn" />';
+    htm+='<button onclick="calcularFactorial()">Factoria</button>';
+    document.getElementById('contenido').innerHTML=htm;
+
+    }
+    function calcularFactorial()
+    {
+    	n=parseInt(document.getElementById('txtn').value);
+    	f=factorial(n);
+    	document.getElementById('resultado').innerHTML=f;
+    }
+    function factorial(n)
+    {
+    	if (n==0)
+    		return 1
+    	else
+    		return factorial(n-1)*n;
+    }
+
+</script>	
+</head>
+<body>
+	
+	<a href="javascript:colocar()">Pregunta 4</a>
+	<div id="contenido"> </div>
+	<div id="resultado"></div>
+
+</body>
+</html></html>
